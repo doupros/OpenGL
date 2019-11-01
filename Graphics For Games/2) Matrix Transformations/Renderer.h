@@ -1,5 +1,6 @@
 #pragma once
 #include "../../nclgl/OGLRenderer.h" 
+#include "Camera.h"
 
 class Renderer : public OGLRenderer {
 public:
@@ -17,5 +18,6 @@ protected:
 	float scale;
 	float rotation;
 	Vector3 position;
+	Camera* camera;
 };
 
