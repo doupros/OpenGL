@@ -1,8 +1,8 @@
-#include "Renderer.h"
+﻿#include "Renderer.h"
 
 Renderer::Renderer(Window& parent) : OGLRenderer(parent) {
 	triangle = Mesh::GenerateTriangle();
-	triangle->SetTexture(SOIL_load_OGL_texture(TEXTUREDIR"brick.tga",
+	triangle->SetTexture(SOIL_load_OGL_texture(TEXTUREDIR"brick1.tga",
 		SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, 0));
 	if (!triangle->GetTexture()) {
 		return;
@@ -33,7 +33,9 @@ void Renderer::RenderScene() {
 }
 
 void Renderer::UpdateTextureMatrix(float value) {
+	//Matrix4 pushPos = Matrix4::Translation(Vector3(0, 0, 0));// 贴图以三角形的哪个角为圆心旋转
 	Matrix4 pushPos = Matrix4::Translation(Vector3(0.5f, 0.5f, 0));
+	//Matrix4 popPos = Matrix4::Translation(Vector3(0,0, 0));// 以贴图中的哪个点为圆心旋转
 	Matrix4 popPos = Matrix4::Translation(Vector3(-0.5f, -0.5f, 0));
 	Matrix4 rotation = Matrix4::Rotation(value, Vector3(0, 0, 1));
 	textureMatrix = pushPos * rotation * popPos;
