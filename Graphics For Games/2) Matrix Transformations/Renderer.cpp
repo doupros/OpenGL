@@ -2,6 +2,7 @@
 
 Renderer::Renderer(Window& parent) : OGLRenderer(parent) {
 	triangle = Mesh::GenerateTriangle();
+	Quad = Mesh::GenerateQuad();
 	currentShader = new Shader(SHADERDIR"MatrixVertex.glsl",
 		SHADERDIR"colourFragment.glsl");
 	camera = new Camera();
@@ -13,6 +14,8 @@ Renderer::Renderer(Window& parent) : OGLRenderer(parent) {
 }
 Renderer::~Renderer(void) {
 	delete triangle;
+	delete Quad;
+	delete camera;
 }
 
 

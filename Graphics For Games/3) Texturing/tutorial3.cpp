@@ -1,4 +1,4 @@
-#pragma comment(lib, "nclgl.lib")
+﻿#pragma comment(lib, "nclgl.lib")
 
 #include "../../nclGL/window.h"
 #include "Renderer.h"
@@ -38,4 +38,22 @@ int main() {
 	}
 
 	return 0;
+
+	// OpenGL Texture Loading 普通情况下的加载纹理方法
+/*	GLuint texture;
+	glGenTextures(1, &texture);
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, texture);
+	glTexImage2D(GL_TEXTURE_2D, mipmapLevel, internalFormat,
+		width, height, border, format, datatype, data);
+	glGenerateMipmap(GL_TEXTURE_2D);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
+		GL_LINEAR_MIPMAP_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glBindTexture(GL_TEXTURE_2D, 0);
+*/
+
+
 }
+
+

@@ -82,4 +82,3 @@ void  Renderer::ToggleBlendMode() {
 		case(3):glBlendFunc(GL_SRC_ALPHA, GL_ONE); break;
 	};
 }
-

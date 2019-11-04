@@ -15,6 +15,7 @@ public:
 	virtual void UpdateScene(float msec);
 protected:
 	Mesh* triangle;
+	Mesh* Quad;
 	float scale;
 	float rotation;
 	Vector3 position;
