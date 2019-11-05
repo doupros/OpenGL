@@ -54,13 +54,13 @@ Mesh* Mesh::GenerateTriangle() {
 
 
 Mesh* Mesh::GenerateQuad() {
-	Mesh* m = new Mesh();
-	m->numVertices = 4;
-	m->type = GL_TRIANGLE_STRIP;
+	Mesh* m				= new Mesh();
+	m->numVertices		= 4;
+	m->type				= GL_TRIANGLE_STRIP;
 
-	m->vertices = new Vector3[m->numVertices];
-	m->textureCoords = new Vector2[m->numVertices];
-	m->colours = new Vector4[m->numVertices];
+	m->vertices			= new Vector3[m->numVertices];
+	m->textureCoords	= new Vector2[m->numVertices];
+	m->colours			= new Vector4[m->numVertices];
 
 	m->vertices[0] = Vector3(-1.0f, -1.0f, 0.0f);
 	m->vertices[1] = Vector3(-1.0f, 1.0f, 0.0f);
@@ -90,7 +90,7 @@ void Mesh::BufferData() {
 	if (textureCoords){
 		glGenBuffers(1, &bufferObject[TEXTURE_BUFFER]);
 		glBindBuffer(GL_ARRAY_BUFFER, bufferObject[TEXTURE_BUFFER]);
-		glBufferData(GL_ARRAY_BUFFER, numVertices * sizeof(Vector2),textureCoords, GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, numVertices * sizeof(Vector2), textureCoords, GL_STATIC_DRAW);
 		glVertexAttribPointer(TEXTURE_BUFFER, 2, GL_FLOAT, GL_FALSE, 0, 0);
 		glEnableVertexAttribArray(TEXTURE_BUFFER);
 	}
@@ -114,6 +114,6 @@ void Mesh::Draw() {
 	glBindTexture(GL_TEXTURE_2D, texture);
 	glBindVertexArray(arrayObject);
 	glDrawArrays(type, 0, numVertices);
+	glBindTexture(GL_TEXTURE_2D, 0);	
 	glBindVertexArray(0);
-	glBindTexture(GL_TEXTURE_2D, 0);
 }

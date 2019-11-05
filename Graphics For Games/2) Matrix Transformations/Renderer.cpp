@@ -40,7 +40,7 @@ void Renderer::RenderScene()
 		, "viewMatrix"), 1, false, (float*)&viewMatrix);
 	for (int i = 0; i < 3; ++i) 
 	{
-		Vector3 tempPos = position;
+		Vector3 tempPos = position; 
 		tempPos.z += (i * 500.0f);
 		tempPos.x -= (i * 100.0f);
 		tempPos.y -= (i * 100.0f);

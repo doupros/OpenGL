@@ -13,13 +13,15 @@ Renderer::Renderer(Window& parent) :OGLRenderer(parent) {
 		SOIL_load_OGL_texture(TEXTUREDIR"stainedglass.tga", SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, 0)
 	);
 
-	if (!textures[0]||!textures[1]){
+	if (!textures[0] || !textures[1]){
 		return;
 	}
+
 	positions[0] = Vector3(0, 0, -5); //5 units away from the viewpoint 
 	positions[1] = Vector3(0,0,-5); 
 
 	currentShader = new Shader(SHADERDIR"TexturedVertex.glsl", SHADERDIR"TexturedFragment.glsl");
+
 	if (!currentShader->LinkProgram()){
 		return;
 	}
@@ -47,7 +49,6 @@ void Renderer::RenderScene()
 	glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "projMatrix"), 1, false, (float*)&projMatrix);
 
 	glUniform1i(glGetUniformLocation(currentShader->GetProgram(), "diffuseTex"), 0);
-
 	glActiveTexture(GL_TEXTURE0);
 	for (unsigned int i = 0; i < 2; ++i){
 		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "modelMatrix"),
@@ -71,7 +72,7 @@ void  Renderer::ToggleDepth() {
 }
 void  Renderer::ToggleAlphaBlend() {
 	usingAlpha = !usingAlpha;
-	usingAlpha ? glEnable(GL_BLEND) : glEnable(GL_BLEND);
+	usingAlpha ? glEnable(GL_BLEND) : glDisable(GL_BLEND);
 }
 void  Renderer::ToggleBlendMode() {
 	blendMode = (blendMode + 1) % 4;
