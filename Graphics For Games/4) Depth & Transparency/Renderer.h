@@ -1,5 +1,6 @@
 #pragma once
 #include "../../nclgl/OGLRenderer.h"
+#include "Camera.h"
 
 class Renderer:public OGLRenderer
 {
@@ -14,6 +15,7 @@ public:
 	void ToggleAlphaBlend();
 	void ToggleBlendMode();
 	void MoveObject(float by);
+	void UpdateScene(float msec);
 
 protected:
 	GLuint textures[2];
@@ -29,5 +31,6 @@ protected:
 	bool usingDepth;
 	bool usingAlpha;
 	int blendMode;
+	Camera* camera;
 };
 

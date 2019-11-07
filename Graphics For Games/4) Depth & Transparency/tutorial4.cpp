@@ -34,10 +34,8 @@ int main()	{
 		if(Window::GetKeyboard()->KeyDown(KEYBOARD_DOWN)) {
 			renderer.MoveObject(-0.1f);
 		}
-		
+		renderer.UpdateScene(w.GetTimer()->GetTimedMS());
 		renderer.RenderScene();
 	}
-
-	
 	return 0;
 }

@@ -4,7 +4,7 @@
 Renderer::Renderer(Window& parent) :OGLRenderer(parent) {
 	meshes[0] = Mesh::GenerateQuad();
 	meshes[1] = Mesh::GenerateTriangle();
-
+	camera = new  Camera;
 	meshes[0]->SetTexture(
 		SOIL_load_OGL_texture(TEXTUREDIR"brick.tga",SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, 0)
 	);
@@ -13,9 +13,12 @@ Renderer::Renderer(Window& parent) :OGLRenderer(parent) {
 		SOIL_load_OGL_texture(TEXTUREDIR"stainedglass.tga", SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, 0)
 	);
 
-	if (!textures[0] || !textures[1]){
-		return;
-	}
+	//textures[0] = SOIL_load_OGL_texture(TEXTUREDIR"brick.tga", SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, 0);
+	//textures[1] = SOIL_load_OGL_texture(TEXTUREDIR"stainedglass.tga", SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, 0);
+
+	//if (!textures[0] || !textures[1]){
+	//	return;
+	//}
 
 	positions[0] = Vector3(0, 0, -5); //5 units away from the viewpoint 
 	positions[1] = Vector3(0,0,-5); 
@@ -49,10 +52,12 @@ void Renderer::RenderScene()
 	glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "projMatrix"), 1, false, (float*)&projMatrix);
 
 	glUniform1i(glGetUniformLocation(currentShader->GetProgram(), "diffuseTex"), 0);
-	glActiveTexture(GL_TEXTURE0);
+	//glActiveTexture(GL_TEXTURE0);
 	for (unsigned int i = 0; i < 2; ++i){
 		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "modelMatrix"),
 			1, false, (float*)&Matrix4::Translation(positions[i]) );
+
+		//glBindTexture(GL_TEXTURE_2D, textures[i]);
 		meshes[i]->Draw();
 	}
 	glUseProgram(0);
@@ -83,3 +88,11 @@ void  Renderer::ToggleBlendMode() {
 		case(3):glBlendFunc(GL_SRC_ALPHA, GL_ONE); break;
 	};
 }
+
+void Renderer::UpdateScene(float msec)
+{
+	camera->UpdateCamera(msec);
+	viewMatrix = camera->BuildViewMatrix();
+}
+
+

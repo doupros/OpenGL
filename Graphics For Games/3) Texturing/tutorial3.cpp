@@ -33,7 +33,7 @@ int main() {
 		if(Window::GetKeyboard()->KeyTriggered(KEYBOARD_2) ) {
 			renderer.ToggleRepeating();
 		}
-
+		
 		renderer.RenderScene();
 	}
 
