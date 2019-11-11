@@ -15,8 +15,8 @@ in 	vec3 tangent;
 in  vec2 texCoord;
 
 //This is how to specify which VBO corresponds to which vertex attribute,
-//entirely within the GLSL shader. We're making location 10 
-//equate to the vec2s we buffered earlier, which store the two weighting components 
+//entirely within the GLSL shader. We're making using location 10, used by the C++ 
+//code for the vec2s we buffered earlier, which store the two weighting components 
 //for each vertex - x is its element count, and y is the first element. 
 layout(location = 10) in vec2 weighting;
 

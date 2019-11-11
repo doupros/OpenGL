@@ -1,6 +1,5 @@
-#ifdef WEEK_2_CODE
-#pragma once
 
+#pragma once
 #include "../../nclgl/OGLRenderer.h"
 #include "../../nclgl/Camera.h"
 #include "../../nclgl/MD5Mesh.h"
@@ -15,8 +14,8 @@ public:
 	virtual void UpdateScene(float msec);
 
 protected:
-	MD5FileData*hellData;
-	MD5Node*	hellNode;
+	MD5FileData* hellData;
+	MD5Node*	 hellNode;
 	Camera*		camera;
 };
-#endif
+

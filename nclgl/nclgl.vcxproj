@@ -27,6 +27,7 @@
     <ClInclude Include="OBJMesh.h" />
     <ClInclude Include="OGLRenderer.h" />
     <ClInclude Include="Quaternion.h" />
+    <ClInclude Include="SceneNode.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="Vector3.h" />
@@ -47,6 +48,7 @@
     <ClCompile Include="OBJMesh.cpp" />
     <ClCompile Include="OGLRenderer.cpp" />
     <ClCompile Include="Quaternion.cpp" />
+    <ClCompile Include="SceneNode.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>

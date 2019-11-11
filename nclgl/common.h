@@ -11,9 +11,7 @@ _-_-_-_-_-_-_-""  ""
 *//////////////////////////////////////////////////////////////////////////////
 
 #pragma once
-
 #define WEEK_2_CODE
-//#define WEEK_3_CODE
 
 /*
 As this tutorial series progresses, you'll learn how to generate normals, tangents,
@@ -24,15 +22,15 @@ If you want to play around with MD5Meshes in the first real time lighting tutori
 uncomment the MD5_USE_NORMALS define. If you want to use and MD5Mesh in the second real
 time lighting tutorial, uncomment both MD5_USE_NORMALS and MD5_USE_TANGENTS_BUMPMAPS
 */
-//#define USE_MD5MESH
-//#define MD5_USE_NORMALS
+#define USE_MD5MESH
+#define MD5_USE_NORMALS
 //#define MD5_USE_TANGENTS_BUMPMAPS
 
 
-/**
-//#define OBJ_USE_NORMALS
+
+#define OBJ_USE_NORMALS
 //#define OBJ_USE_TANGENTS_BUMPMAPS
-*/
+
 
 //It's pi(ish)...
 static const float		PI = 3.14159265358979323846f;	
