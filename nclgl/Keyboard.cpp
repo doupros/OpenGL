@@ -33,7 +33,7 @@ void Keyboard::Sleep()	{
 }
 
 /*
-Returns if the key is down. Doesn't need bounds checking - 
+Returns if the key is down.Doesn't need bounds checking - 
 a KeyboardKeys enum is always in range
 */
 bool Keyboard::KeyDown(KeyboardKeys key)	{
@@ -41,7 +41,7 @@ bool Keyboard::KeyDown(KeyboardKeys key)	{
 }
 
 /*
-Returns if the key is down, and has been held down for multiple updates. 
+Returns if the key is down, and has been held down for multiple updates.
 Doesn't need bounds checking - a KeyboardKeys enum is always in range
 */
 bool Keyboard::KeyHeld(KeyboardKeys key)	{

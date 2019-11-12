@@ -3,7 +3,7 @@
 Class:Vector3
 Implements:
 Author:Rich Davison
-Description:VERY simple Vector3 class. Students are encouraged to modify this as necessary!
+Description:VERY simple Vector3 class.Students are encouraged to modify this as necessary!
 
 -_-_-_-_-_-_-_,------,   
 _-_-_-_-_-_-_-|   /\_/\   NYANYANYAN

@@ -8,7 +8,7 @@ Input devices can be temporarily sent to sleep (so keyboard input doesn't work
 when the game is minimised etc), and obviously woken up again.
 
 Input devices may also keep track of 'holds' - i.e keys or buttons pressed for
-more than one frame. This allows you to have both things that trigger once,
+more than one frame.This allows you to have both things that trigger once,
 and are continuously active as long as a key / button is pressed.
 
 -_-_-_-_-_-_-_,------,   

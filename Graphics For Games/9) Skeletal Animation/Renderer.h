@@ -5,9 +5,9 @@
 #include "../../nclgl/MD5Mesh.h"
 #include "../../nclgl/MD5Node.h"
 
-class Renderer : public OGLRenderer		{
+class Renderer : public OGLRenderer {
 public:
-	Renderer(Window &parent);
+	Renderer(Window& parent);
 	virtual ~Renderer(void);
 
 	virtual void RenderScene();
@@ -15,7 +15,7 @@ public:
 
 protected:
 	MD5FileData* hellData;
-	MD5Node*	 hellNode;
-	Camera*		camera;
+	MD5Node* hellNode;
+	Camera* camera;
 };
 

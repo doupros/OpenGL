@@ -4,10 +4,10 @@ Implements:
 Author:Rich Davison	<richard.davison4@newcastle.ac.uk>
 Description: Implementation of id Software's MD5 skeletal animation format.
 
-MD5Anims are slightly less complicated than MD5Meshes. They consist of a 
+MD5Anims are slightly less complicated than MD5Meshes.They consist of a 
 'base frame', which is like a bind pose for an animation, and a number of
 animation frames, each of which has a number of values in it, equating to the
-differences between this frame of animation and the base frame. Depending on
+differences between this frame of animation and the base frame.Depending on
 the software used to export the MD5Anim, the baseframe might be 'empty',
 meaning each frame consist of every transform for every joint.
 
@@ -51,9 +51,9 @@ most of them will only actually be used once.
 
 /*
 Each MD5 anim frame has the differences between the baseframe and itself,
-stored as an array of floating points. So if the x axis position of a joint
+stored as an array of floating points.So if the x axis position of a joint
 changes in a frame, the joints position.x is replaced with a float from the
-array. Whether a frame changes a joint's position is determined by a mask,
+array.Whether a frame changes a joint's position is determined by a mask,
 which is ANDed against using the following defines, where a value of > 1
 means the component changes.
 */
@@ -66,7 +66,7 @@ means the component changes.
 #define MD5_ANIM_ZQUAT			32
 
 /*
-Every MD5Anim has a number of MD5AnimJoints. These are essentially the
+Every MD5Anim has a number of MD5AnimJoints.These are essentially the
 same as MD5Mesh joints, with an added bitmask, which determines which
 components of the joint, if any, are updated in this animation.
 */
@@ -79,7 +79,7 @@ struct MD5AnimJoint{
 
 /*
 Every MD5Anim frame has an axis aligned bounding box, stretching from min
-to max. Useful for collision detection etc.
+to max.Useful for collision detection etc.
 TODO: These haven't actually been transformed into the correct axis yet!
 */
 struct MD5Bounds {
@@ -109,9 +109,9 @@ struct MD5BaseFrame {
 
 /*
 Every MD5Anim is made up of a number of MD5Frame structs - one for each
-frame of the animation. It consists of an array of floats, which equate
+frame of the animation.It consists of an array of floats, which equate
 to the orientation and position changes from the baseframe for the current
-animation frame. Which component equates to each frame 'delta' is determined
+animation frame.Which component equates to each frame 'delta' is determined
 by the flags variable of the MD5AnimJoint
 */
 struct MD5Frame {
@@ -130,7 +130,7 @@ struct MD5Frame {
 struct MD5Skeleton;
 
 /*
-Now for the class definition. Every MD5Anim has a number of joints
+Now for the class definition.Every MD5Anim has a number of joints
 (which should equal the number of joints of the MD5Mesh it is to be applied to)
 a number of frames of animation, an axis-aligned bounding box for every frame, 
 and a baseFrame.

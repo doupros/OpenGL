@@ -3,14 +3,14 @@ Class:MD5Node
 Implements:SceneNode
 Author:Rich Davison
 Description: This year, we're going to more tightly integrate MD5 mesh
-rendering to the concept of a scene graph. 
+rendering to the concept of a scene graph.
 
 This simple subclass of the SceneNode contains the information required to
 render and animate a skeletal mesh.
 
 We need the data from the file we load (sourceData), a data structure to store
 the current state of this node's skeleton (currentSkeleton) and a pointer to
-the animation being used to modify this skeleton (currentAnim). 
+the animation being used to modify this skeleton (currentAnim).
 
 Why don't we just keep this all in the MD5Mesh class? Doing that would mean
 we'd either have to have only one particular instance of a mesh, or load the

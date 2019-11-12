@@ -2,7 +2,7 @@
 Class:Vector4
 Implements:
 Author:Rich Davison
-Description:VERY simple Vector4 class. Students are encouraged to modify this as necessary!
+Description:VERY simple Vector4 class.Students are encouraged to modify this as necessary!
 
 -_-_-_-_-_-_-_,------,   
 _-_-_-_-_-_-_-|   /\_/\   NYANYANYAN

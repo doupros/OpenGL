@@ -3,7 +3,7 @@
 Class:Vector2
 Implements:
 Author:Rich Davison
-Description:VERY simple Vector2 class. Students are encouraged to modify this as necessary!
+Description:VERY simple Vector2 class.Students are encouraged to modify this as necessary!
 
 -_-_-_-_-_-_-_,------,   
 _-_-_-_-_-_-_-|   /\_/\   NYANYANYAN

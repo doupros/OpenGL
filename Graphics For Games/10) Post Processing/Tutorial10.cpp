@@ -18,9 +18,12 @@ int main() {
 	w.ShowOSPointer(false);
 
 	while(w.UpdateWindow() && !Window::GetKeyboard()->KeyDown(KEYBOARD_ESCAPE)){
+
+		if (Window::GetKeyboard()->KeyTriggered(KEYBOARD_1)) {
+			renderer.TogglePostProssing();
+		}
 		renderer.UpdateScene(w.GetTimer()->GetTimedMS());
 		renderer.RenderScene();
 	}
-
 	return 0;
 }

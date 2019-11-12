@@ -63,7 +63,7 @@ void MD5Anim::LoadMD5Anim( std::string filename )	{
 		else if(currentLine.find(MD5_COMMANDLINE_TAG) != std::string::npos) {
 			/*
 			MD5Anim files sometimes have a 'command line' value, used by the game
-			toolchain to generate some data. We don't care about it!
+			toolchain to generate some data.We don't care about it!
 			*/
 			std::cout << "Ignoring commandline value" << std::endl;
 		}
@@ -113,9 +113,9 @@ void MD5Anim::LoadMD5Anim( std::string filename )	{
 }
 
 /*
-Loads in the MD5Anim joint hierarchy. Uses the same ifstream as LoadMD5Anim, passed
-by reference. We also pass a count variable by reference, which this function will
-increment for every joint we load in. 
+Loads in the MD5Anim joint hierarchy.Uses the same ifstream as LoadMD5Anim, passed
+by reference.We also pass a count variable by reference, which this function will
+increment for every joint we load in.
 */
 void MD5Anim::LoadMD5AnimHierarchy( std::ifstream &from,unsigned int &count )	{
 	/*
@@ -151,9 +151,9 @@ void MD5Anim::LoadMD5AnimHierarchy( std::ifstream &from,unsigned int &count )	{
 }
 
 /*
-Loads in the MD5Anim anim frames AABBs. Uses the same ifstream as LoadMD5Anim, passed
-by reference. We also pass a count variable by reference, which this function will
-increment for every joint we load in. 
+Loads in the MD5Anim anim frames AABBs.Uses the same ifstream as LoadMD5Anim, passed
+by reference.We also pass a count variable by reference, which this function will
+increment for every joint we load in.
 */
 void MD5Anim::LoadMD5AnimBounds( std::ifstream &from,unsigned int &count  )	{
 	/*
@@ -196,7 +196,7 @@ void MD5Anim::LoadMD5AnimBounds( std::ifstream &from,unsigned int &count  )	{
 
 /*
 Loads in the MD5Anim base frame, which consists of the default
-positions and orientations of every joint in the mesh. 
+positions and orientations of every joint in the mesh.
 Uses the same ifstream as LoadMD5Anim, passed by reference.
 */
 void MD5Anim::LoadMD5AnimBaseFrame( std::ifstream &from )	{
@@ -241,7 +241,7 @@ void MD5Anim::LoadMD5AnimBaseFrame( std::ifstream &from )	{
 
 			/*
 			To save a tiny bit of space, the 4th component of the orientation
-			quaternion is left out of the files. As we're dealing with unit length 
+			quaternion is left out of the files.As we're dealing with unit length 
 			quaternions (i.e they have a length of 1), the 4th component will be 
 					sqrt of (1.0 - length of the other 3 components)
 			*/
@@ -257,10 +257,10 @@ void MD5Anim::LoadMD5AnimBaseFrame( std::ifstream &from )	{
 
 /*
 Loads in an MD5Frane, which consists of the differences from the baseframe
-of the positions and orientations of every joint in the mesh. 
+of the positions and orientations of every joint in the mesh.
 Uses the same ifstream as LoadMD5Anim, passed by reference.
 We also pass a count variable by reference, which this function will
-increment for every joint we load in. 
+increment for every joint we load in.
 */
 void MD5Anim::LoadMD5AnimFrame( std::ifstream &from, unsigned int &count)	{
 	/*
@@ -303,7 +303,7 @@ void MD5Anim::LoadMD5AnimFrame( std::ifstream &from, unsigned int &count)	{
 //orientations for the desired frame
 void	MD5Anim::TransformSkeleton(MD5Skeleton &skel, unsigned int frameNum) {
 	/*
-	Here's the most important function of the MD5Anim class. This transforms an input
+	Here's the most important function of the MD5Anim class.This transforms an input
 	skeleton's joints (generally this will be the 'working' skeleton from an MD5Mesh instance)
 	to the required transforms to represent the desired frame of animation
 	*/
@@ -324,8 +324,8 @@ void	MD5Anim::TransformSkeleton(MD5Skeleton &skel, unsigned int frameNum) {
 		/*
 		Each frame has a number of 'delta' components, and each joint
 		uses a number of these components to update its position and
-		orientation. Whether or not each value is updated or not is
-		determined by the joints flags variable. The starting
+		orientation.Whether or not each value is updated or not is
+		determined by the joints flags variable.The starting
 		component for each joint is determined by the frameIndex value
 		of the joint.
 
@@ -387,7 +387,7 @@ void	MD5Anim::TransformSkeleton(MD5Skeleton &skel, unsigned int frameNum) {
 		skelJoint.position		= animPos;
 		skelJoint.orientation	= animQuat;	
 
-		//Now to set the local transform of the current joint. We start by turning the orientation
+		//Now to set the local transform of the current joint.We start by turning the orientation
 		//quaternion into a Matrix4, then we set the resulting matrix translation to the
 		//transformed baseframe position
 
@@ -401,9 +401,9 @@ void	MD5Anim::TransformSkeleton(MD5Skeleton &skel, unsigned int frameNum) {
 		}
 		else{	
 			//If this joint /does/ have a parent, we transform the joint's transform by its
-			//parent transform. Note that we don't have to transform it by the conversion matrix
+			//parent transform.Note that we don't have to transform it by the conversion matrix
 			//again, as the parent node will already contain it, due to being propagated from 
-			//the root node. Matrices are fun!
+			//the root node.Matrices are fun!
 			MD5Joint &parent = skel.joints[skelJoint.parent];
 			skelJoint.transform = parent.transform * skelJoint.localTransform;
 		}

@@ -18,8 +18,8 @@ MD5Node::~MD5Node(void)	{
 /*
 This Overridden Update function will update the current animation frame used
 by this particular mesh instance, by subtracting the incoming time value
-by a float /frameTime/, which when less than 0, triggers a frame update. This
-float is then reset to the framerate defined within the current animation. A
+by a float /frameTime/, which when less than 0, triggers a frame update.This
+float is then reset to the framerate defined within the current animation.A
 while is used instead of an if for the unusual occurance of a time value being
 large enough that we could risk skipping over frames - generally this only 
 happens when we hit a debug breakpoint.
@@ -40,14 +40,14 @@ void	MD5Node::Update(float msec) {
 		currentAnim->TransformSkeleton(currentSkeleton,currentAnimFrame-1);
 	}
 	//Call our base class update function, too! Doing so will presever the 
-	//ability to build up the world matrices for every node. 
+	//ability to build up the world matrices for every node.
 	SceneNode::Update(msec);
 }
 
 
 
 /*
-Swaps the currently used animation of this MD5Mesh. 
+Swaps the currently used animation of this MD5Mesh.
 */
 void	MD5Node::PlayAnim(std::string name)	{
 /*
@@ -64,7 +64,7 @@ void	MD5Node::Draw(const OGLRenderer &r) {
 	/*
 	I have added experimental support for performing skinning inside the vertex
 	shader, in order for everyone to see one way of getting lots of data into
-	'shader space'. To do so, I use an OpenGL feature called a Texture Buffer
+	'shader space'.To do so, I use an OpenGL feature called a Texture Buffer
 	Object, which allows a VBO to be 'seen' as texture data inside a shader.
 
 	I store the current skeleton state inside a VBO, and then bind this VBO
@@ -72,7 +72,7 @@ void	MD5Node::Draw(const OGLRenderer &r) {
 
 	I also store the mesh weights and anchor transforms inside a TBO, too, so
 	that the shader can access all of the data necessary to update the vertex
-	to the correct local position. This is a slight change in method to the
+	to the correct local position.This is a slight change in method to the
 	'use lots of uniforms' method outlined in the tutorial writeup, but it is
 	still worth considering the uniform method, as the current consoles do not
 	support the arbitrary data lookup method used by OpenGL TBOs...
@@ -90,7 +90,7 @@ void	MD5Node::Draw(const OGLRenderer &r) {
 	data is in the correct position for this node before we draw it, which we do
 	by calling the 'skin vertices' function of the MD5Mesh, passing it our node's
 	current skeleton, which will have been updated in the Update function to be in
-	the correct pose for the current frame of animation. 
+	the correct pose for the current frame of animation.
 	*/
 	m->SkinVertices(currentSkeleton);
 #endif
@@ -232,8 +232,8 @@ void	MD5Node::DebugDrawSkeleton() {
 	
 		/*
 		Now for each joint we're going to have a pair of vertices - one at the joint position,
-		and one at the joint's parent's position. This'll let us draw lines to show the skeletal
-		shape. There'll be a bit of overdraw, which could be avoided by using indices. but this way
+		and one at the joint's parent's position.This'll let us draw lines to show the skeletal
+		shape.There'll be a bit of overdraw, which could be avoided by using indices.but this way
 		is 'good enough'
 		*/
 		for(int i = 0; i < currentSkeleton.numJoints; ++i) {
@@ -259,8 +259,8 @@ void	MD5Node::DebugDrawSkeleton() {
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, 0);
 	
-		//Draws the array twice, once as points, and once as lines. glLineWidth may or may not actually do anything
-		//as it is deprecated functionality in OGL 3.2. 
+		//Draws the array twice, once as points, and once as lines.glLineWidth may or may not actually do anything
+		//as it is deprecated functionality in OGL 3.2.
 		glPointSize(5.0f);
 		glLineWidth(2.0f);
 		glDrawArrays(GL_POINTS, 0, currentSkeleton.numJoints * 2);	// draw Joints

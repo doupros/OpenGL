@@ -2,7 +2,7 @@
 Class:MD5FileData
 Implements:
 Author:Rich Davison	<richard.davison4@newcastle.ac.uk>
-Description: Implementation of id Software's MD5 skeletal animation format. 
+Description: Implementation of id Software's MD5 skeletal animation format.
 
 This class stores all of the arrays of data loaded in from an MD5Mesh file.
 
@@ -47,7 +47,7 @@ most of them will only actually be used once.
 
 /*
 An MD5Mesh is formed from various data structures, all of which are loaded
-in from the file and stored, as they're used for skinning the mesh. 
+in from the file and stored, as they're used for skinning the mesh.
 
 */
 
@@ -66,12 +66,12 @@ struct MD5Tri {
 
 /*
 Each MD5Skeleton has an array of joints, which are arranged in a parent/child
-hierarchy, forming the skeleton. Each joint is given a name, so it can be
-targeted by scripting ('GetTransformOfJoint("Hand") etc). Joint names are
+hierarchy, forming the skeleton.Each joint is given a name, so it can be
+targeted by scripting ('GetTransformOfJoint("Hand") etc).Joint names are
 stored separately, to avoid an annoying string copying problem with using
-memcpy on an array of MD5Joints. MD5Joints have their transform twice - 
+memcpy on an array of MD5Joints.MD5Joints have their transform twice - 
 once as separate Vector3 and Quaternion (loaded from the MD5Mesh file) and
-once as a Matrix4, generated at run-time. This is to make it more obvious
+once as a Matrix4, generated at run-time.This is to make it more obvious
 that joints really are just scenenode transforms like you are used to, as
 well as making it slightly more efficient to transform the mesh.
 */
@@ -88,8 +88,8 @@ struct MD5Joint {
 
 
 /*
-Each MD5SubMesh has an array of MD5Verts. These are the vertices for the
-submesh. As you an see, they are defined in the 'multiple weight position'
+Each MD5SubMesh has an array of MD5Verts.These are the vertices for the
+submesh.As you an see, they are defined in the 'multiple weight position'
 variation of vertex skinning, and so do not have a position themselves.
 Instead, they have an index into an array of MD5Weights, and a number of
 weights to use from this array, from which the MD5Vert's final position
@@ -103,8 +103,8 @@ struct MD5Vert {
 };
 
 /*
-Each MD5SubMesh also has an array of MD5Weights. These store an 'anchor'
-position, and a weighting value (between 0.0 and 1.0). They also have an
+Each MD5SubMesh also has an array of MD5Weights.These store an 'anchor'
+position, and a weighting value (between 0.0 and 1.0).They also have an
 index into the MD5Skeleton joint array, to determine which MD5Joint this
 MD5Weight is relative to.
 */
@@ -135,10 +135,10 @@ struct MD5Skeleton {
 };
 
 /*
-Each MD5SubMesh has an array of MD5SubMeshes. Depending on the actual MD5Mesh
+Each MD5SubMesh has an array of MD5SubMeshes.Depending on the actual MD5Mesh
 loaded there might only be one MD5SubMesh (the whole model) or a number of them
-(one for each arm, leg, etc). Each has an array of MD5Tris, MD5Weights, and
-MD5Verts. We also store the OpenGL names for the diffuse and bump textures 
+(one for each arm, leg, etc).Each has an array of MD5Tris, MD5Weights, and
+MD5Verts.We also store the OpenGL names for the diffuse and bump textures 
 here - don't worry if you don't know what a bump map is yet!
 */
 struct MD5SubMesh {
@@ -201,7 +201,7 @@ public:
 	MD5Anim*	GetAnim(const string &name) const;
 
 	/*
-	Adds an MD5Anim to the MD5Mesh's map of animations. This should probably
+	Adds an MD5Anim to the MD5Mesh's map of animations.This should probably
 	return a bool to detect file loading success.
 	*/
 	void		AddAnim(std::string filename);
@@ -211,10 +211,10 @@ public:
 	/*
 	idTech games (as well as Unreal engine games, and some others) don't use
 	the standard axis' you'll be used to, pointing down negative Z and having
-	Y as 'up'. Instead, they point down negative X, and have Z as up. This means
+	Y as 'up'.Instead, they point down negative X, and have Z as up.This means
 	all of the data in the MD5Mesh file is 'incorrectly' rotated for the
-	standard OGL render space. We can transform everything to the 'correct' space
-	using a simple transformation matrix. We only need one such matrix, and it
+	standard OGL render space.We can transform everything to the 'correct' space
+	using a simple transformation matrix.We only need one such matrix, and it
 	never needs to change once created, so it is declared as static const.
 	*/
 	static const Matrix4 conversionMatrix;
@@ -269,10 +269,10 @@ protected:
 	std::map<std::string, MD5Anim*>	animations;	//map of anims for this mesh
 
 //These are extra buffers, and arrays of data, for use when using hardware
-//skinning of meshes. We have 2 extra buffers - VBOs for storing the
-//weights and skeleton of our mesh. We also have 2 extra textures, which will
+//skinning of meshes.We have 2 extra buffers - VBOs for storing the
+//weights and skeleton of our mesh.We also have 2 extra textures, which will
 //really be OpenGL 'pointers' to the new VBOs, suitable for sampling inside
-//a shader. Finally, we have a couple of arrays, just to store where our VBOs
+//a shader.Finally, we have a couple of arrays, just to store where our VBOs
 //get their data from, for consistency with other VBO data arrays we make
 #ifdef MD5_USE_HARDWARE_SKINNING 
 	GLuint			weightBuffer;		//VBO where we keep weightings of this mesh

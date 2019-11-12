@@ -24,7 +24,7 @@ void SceneNode::Draw(const OGLRenderer& r)
 }
 
 void SceneNode::Update(float msec) {
-	if (parent) { //This node has a parent... 
+	if (parent) { //This node has a parent...
 		worldTransform = parent ->worldTransform * transform; 
 	} 
 	else{ //Root node , world transform is local transform! 

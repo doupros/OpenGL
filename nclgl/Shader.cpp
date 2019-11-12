@@ -26,7 +26,7 @@ Shader ::~Shader(void) {
 }
 
 GLuint Shader::GenerateShader(string from, GLenum type) {
-	cout << " Compiling Shader ... " << endl;
+	cout << " Compiling Shader ..." << endl;
 	string load;
 	if (!LoadShaderFile(from, load)) {
 		cout << " Compiling failed !" << endl;

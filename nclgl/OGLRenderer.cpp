@@ -1,8 +1,8 @@
 /*
 Class:OGLRenderer
 Author:Rich Davison	<richard.davison4@newcastle.ac.uk>
-Description:Abstract base class for the graphics tutorials. Creates an OpenGL 
-3.2 CORE PROFILE rendering context. Each lesson will create a renderer that 
+Description:Abstract base class for the graphics tutorials.Creates an OpenGL 
+3.2 CORE PROFILE rendering context.Each lesson will create a renderer that 
 inherits from this class - so all context creation is handled automatically,
 but students still get to see HOW such a context is created.
 
@@ -26,8 +26,8 @@ bool		   OGLRenderer::drawnDebugPerspective	= false;
 
 
 /*
-Creates an OpenGL 3.2 CORE PROFILE rendering context. Sets itself
-as the current renderer of the passed 'parent' Window. Not the best
+Creates an OpenGL 3.2 CORE PROFILE rendering context.Sets itself
+as the current renderer of the passed 'parent' Window.Not the best
 way to do it - but it kept the Tutorial code down to a minimum!
 */
 OGLRenderer::OGLRenderer(Window &window)	{
@@ -158,7 +158,7 @@ OGLRenderer::OGLRenderer(Window &window)	{
 }
 
 /*
-Destructor. Deletes the default shader, and the OpenGL rendering context.
+Destructor.Deletes the default shader, and the OpenGL rendering context.
 */
 OGLRenderer::~OGLRenderer(void)	{
 	delete orthoDebugData;
@@ -177,7 +177,7 @@ bool OGLRenderer::HasInitialised() const{
 }
 
 /*
-Resizes the rendering area. Should only be called by the Window class!
+Resizes the rendering area.Should only be called by the Window class!
 Does lower bounds checking on input values, so should be reasonably safe
 to call.
 */
@@ -188,7 +188,7 @@ void OGLRenderer::Resize(int x, int y)	{
 }
 
 /*
-Swaps the buffers, ready for the next frame's rendering. Should be called
+Swaps the buffers, ready for the next frame's rendering.Should be called
 every frame, at the end of RenderScene(), or whereever appropriate for
 your application.
 */
@@ -204,13 +204,13 @@ void OGLRenderer::SwapBuffers() {
 		drawnDebugPerspective	= false;
 	}
 
-	//We call the windows OS SwapBuffers on win32. Wrapping it in this 
+	//We call the windows OS SwapBuffers on win32.Wrapping it in this 
 	//function keeps all the tutorial code 100% cross-platform (kinda).
 	::SwapBuffers(deviceContext);
 }
 /*
 Used by some later tutorials when we want to have framerate-independent
-updates on certain datatypes. Really, OGLRenderer should have its own
+updates on certain datatypes.Really, OGLRenderer should have its own
 timer, so it can just sit and look after itself (potentially even in
 another thread...), but it's fine for the tutorials.
 
@@ -223,10 +223,10 @@ void OGLRenderer::UpdateScene(float msec)	{
 }
 
 /*
-Updates the uniform matrices of the current shader. Assumes that
+Updates the uniform matrices of the current shader.Assumes that
 the shader has uniform matrices called modelMatrix, viewMatrix,
-projMatrix, and textureMatrix. Updates them with the relevant
-matrix data. Sanity checks currentShader, so is always safe to
+projMatrix, and textureMatrix.Updates them with the relevant
+matrix data.Sanity checks currentShader, so is always safe to
 call.
 */
 void OGLRenderer::UpdateShaderMatrices()	{

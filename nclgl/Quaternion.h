@@ -2,7 +2,7 @@
 Class:Quaternion
 Implements:
 Author:Rich Davison
-Description:VERY simple Quaternion class. Students are encouraged to modify 
+Description:VERY simple Quaternion class.Students are encouraged to modify 
 this as necessary...if they dare.
 
 Quaternions aren't really discussed much in the graphics module, but the 

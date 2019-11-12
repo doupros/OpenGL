@@ -2,8 +2,8 @@
 /*
 Class:OGLRenderer
 Author:Rich Davison	<richard.davison4@newcastle.ac.uk>
-Description:Abstract base class for the graphics tutorials. Creates an OpenGL 
-3.2 CORE PROFILE rendering context. Each lesson will create a renderer that 
+Description:Abstract base class for the graphics tutorials.Creates an OpenGL 
+3.2 CORE PROFILE rendering context.Each lesson will create a renderer that 
 inherits from this class - so all context creation is handled automatically,
 but students still get to see HOW such a context is created.
 
@@ -129,7 +129,7 @@ protected:
 	
 
 	Matrix4 projMatrix;		//Projection matrix
-	Matrix4 modelMatrix;	//Model matrix. NOT MODELVIEW
+	Matrix4 modelMatrix;	//Model matrix.NOT MODELVIEW
 	Matrix4 viewMatrix;		//View matrix
 	Matrix4 textureMatrix;	//Texture matrix
 

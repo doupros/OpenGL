@@ -50,12 +50,12 @@ public:
 	
 	//Has the mouse wheel moved since the last update?
 	bool	WheelMoved();
-	//Get the mousewheel movement. Positive means scroll up,
+	//Get the mousewheel movement.Positive means scroll up,
 	//negative means scroll down, 0 means no movement.
 	int		GetWheelMovement();
 
-	//Sets the mouse sensitivity. Currently only affects the 'relative'
-	//(i.e FPS-style) mouse movement. Students! Maybe you'd like to
+	//Sets the mouse sensitivity.Currently only affects the 'relative'
+	//(i.e FPS-style) mouse movement.Students! Maybe you'd like to
 	//implement a 'MenuSensitivity' for absolute movement?
 	void	SetMouseSensitivity(float amount);
 
@@ -66,18 +66,18 @@ protected:
 	//Internal function that updates the mouse variables from a 
 	//raw input 'packet'
 	virtual void	Update(RAWINPUT* raw);
-	//Updates the holdButtons array. Call once per frame!
+	//Updates the holdButtons array.Call once per frame!
 	virtual void	UpdateHolds();
 	//Sends the mouse to sleep (i.e window has been alt-tabbed away etc)
 	virtual void	Sleep();
 
-	//Updates the doubleclicks array. Call once per frame!
+	//Updates the doubleclicks array.Call once per frame!
 	void			UpdateDoubleClick(float msec);
 
-	//Set the mouse's current screen position. Maybe should be public?
+	//Set the mouse's current screen position.Maybe should be public?
 	void			SetAbsolutePosition(unsigned int x,unsigned int y);
 
-	//Set the absolute screen bounds (<0 is always assumed dissallowed). Used
+	//Set the absolute screen bounds (<0 is always assumed dissallowed).Used
 	//by the window resize routine...
 	void			SetAbsolutePositionBounds(unsigned int maxX, unsigned int maxY);
 
@@ -105,7 +105,7 @@ protected:
 	//Max amount of ms between clicks count as a 'double click'
 	float		clickLimit;
 
-	//Mouse pointer sensitivity. Set this negative to get a headache!
+	//Mouse pointer sensitivity.Set this negative to get a headache!
 	float		sensitivity;
 };
 

@@ -18,7 +18,7 @@ f vert index / tex index / norm index  vert index / tex index / norm index  vert
 (i.e there's a set of float/float/float for each vertex of a face)
 
 OBJ files can also be split up into a number of submeshes, making loading them
-in even more annoying. 
+in even more annoying.
 */
 bool	OBJMesh::LoadOBJMesh(std::string filename)	{
 	std::ifstream f(filename.c_str(),std::ios::in);
@@ -108,7 +108,7 @@ bool	OBJMesh::LoadOBJMesh(std::string filename)	{
 				f <vertex index>//<normal index>
 				instead of <vertex index>/<tex coord>/<normal index>
 
-				you can be some OBJ files will have "/ /" instead of "//" though... :(
+				you can be some OBJ files will have "/ /" instead of "//" though...:(
 			*/
 			bool	skipTex = false;
 			if(faceData.find("//") != std::string::npos) {	
@@ -166,7 +166,7 @@ bool	OBJMesh::LoadOBJMesh(std::string filename)	{
 			}
 			else{	
 				std::cout << __func__ << ": Can't read face with faceIndex count of " << faceIndices.size() << std::endl;
-				//Uh oh! Face isn't a triangle. Have fun adding stuff to this ;)
+				//Uh oh! Face isn't a triangle.Have fun adding stuff to this ;)
 				bool a = true;
 			}
 		}
@@ -247,11 +247,11 @@ bool	OBJMesh::LoadOBJMesh(std::string filename)	{
 }
 
 /*
-Draws the current OBJMesh. The handy thing about overloaded virtual functions
+Draws the current OBJMesh.The handy thing about overloaded virtual functions
 is that they can still run the code they have 'overridden', by calling the 
-parent class function as you would a static function. So all of the new stuff
+parent class function as you would a static function.So all of the new stuff
 you've been building up in the Mesh class as the tutorials go on, will 
-automatically be used by this overloaded function. Once 'this' has been drawn,
+automatically be used by this overloaded function.Once 'this' has been drawn,
 all of the children of 'this' will be drawn
 */
 void OBJMesh::Draw() {

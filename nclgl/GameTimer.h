@@ -1,9 +1,9 @@
 /******************************************************************************
 Class:GameTimer
 Author:Rich Davison
-Description:Wraps Windows PerformanceCounter. GameTimers keep track of how much
+Description:Wraps Windows PerformanceCounter.GameTimers keep track of how much
 time has passed since they were last polled - so you could use multiple
-GameTimers to trigger events at different time periods. 
+GameTimers to trigger events at different time periods.
 
 -_-_-_-_-_-_-_,------,   
 _-_-_-_-_-_-_-|   /\_/\   NYANYANYAN

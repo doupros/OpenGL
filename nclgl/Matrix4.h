@@ -2,7 +2,7 @@
 Class:Matrix4
 Implements:
 Author:Rich Davison
-Description:VERY simple 4 by 4 matrix class. Students are encouraged to modify 
+Description:VERY simple 4 by 4 matrix class.Students are encouraged to modify 
 this as necessary! Overloading the [] operator to allow acces to the values
 array in a neater way might be a good start, as the floats that make the matrix 
 up are currently public.
@@ -54,7 +54,7 @@ public:
 	static Matrix4 Scale(const Vector3 &scale);
 
 	//Creates a translation matrix (identity, with 'translation' vector at
-	//floats 12, 13, and 14. Analogous to glTranslatef
+	//floats 12, 13, and 14.Analogous to glTranslatef
 	static Matrix4 Translation(const Vector3 &translation);
 
 	//Creates a perspective matrix, with 'znear' and 'zfar' as the near and 
@@ -63,7 +63,7 @@ public:
 	static Matrix4 Perspective(float znear, float zfar, float aspect, float fov);
 
 	//Creates an orthographic matrix with 'znear' and 'zfar' as the near and 
-	//far planes, and so on. Descriptive variable names are a good thing!
+	//far planes, and so on.Descriptive variable names are a good thing!
 	static Matrix4 Orthographic(float znear, float zfar,float right, float left, float top, float bottom);
 
 	//Builds a view matrix suitable for sending straight to the vertex shader.
@@ -73,7 +73,7 @@ public:
 
 	Matrix4 GetTransposedRotation();
 
-	//Multiplies 'this' matrix by matrix 'a'. Performs the multiplication in 'OpenGL' order (ie, backwards)
+	//Multiplies 'this' matrix by matrix 'a'.Performs the multiplication in 'OpenGL' order (ie, backwards)
 	inline Matrix4 operator*(const Matrix4 &a) const{	
 		Matrix4 out;
 		//Students! You should be able to think up a really easy way of speeding this up...
@@ -115,7 +115,7 @@ public:
 		);
 	};
 
-	//Handy string output for the matrix. Can get a bit messy, but better than nothing!
+	//Handy string output for the matrix.Can get a bit messy, but better than nothing!
 	inline friend std::ostream& operator<<(std::ostream& o, const Matrix4& m){
 		o << "Mat4(";
 		o << "\t"	<< m.values[0] << "," << m.values[1] << "," << m.values[2] << "," << m.values [3] << std::endl;

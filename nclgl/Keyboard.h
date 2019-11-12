@@ -2,7 +2,7 @@
 Class:Keyboard
 Implements:InputDevice
 Author:Rich Davison
-Description:RAW Input keyboard class. I've made absolutely no attempt to ensure
+Description:RAW Input keyboard class.I've made absolutely no attempt to ensure
 that this class works for multiple keyboards attached to a single system.
 
 You shouldn't really have to mess with this class too much, there's nothing too

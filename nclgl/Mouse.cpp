@@ -105,11 +105,11 @@ void	Mouse::SetMouseSensitivity(float amount)	{
 
 /*
 Updates variables controlling whether a mouse button has been
-held for multiple frames. Also updates relative movement.
+held for multiple frames.Also updates relative movement.
 */
 void Mouse::UpdateHolds()	{
 	memcpy(holdButtons,buttons,	MOUSE_MAX * sizeof(bool));
-	//We sneak this in here, too. Resets how much the mouse has moved
+	//We sneak this in here, too.Resets how much the mouse has moved
 	//since last update
 	relativePosition.ToZero();
 	//And the same for the mouse wheel
@@ -135,7 +135,7 @@ void	Mouse::SetAbsolutePosition(unsigned int x, unsigned int y)	{
 }
 
 /*
-Returns if the button is down. Doesn't need bounds checking - 
+Returns if the button is down.Doesn't need bounds checking - 
 an INPUT_KEYS enum is always in range
 */
 bool Mouse::ButtonDown(MouseButtons b)	{
@@ -143,7 +143,7 @@ bool Mouse::ButtonDown(MouseButtons b)	{
 }
 
 /*
-Returns if the button is down, and has been held down for multiple updates. 
+Returns if the button is down, and has been held down for multiple updates.
 Doesn't need bounds checking - an INPUT_KEYS enum is always in range
 */
 bool Mouse::ButtonHeld(MouseButtons b)	{
@@ -187,16 +187,16 @@ bool Mouse::DoubleClicked(MouseButtons button)	{
 }
 
 /*
-Get the mousewheel movement. Positive values mean the mousewheel
-has moved up, negative down. Can be 0 (no movement)
+Get the mousewheel movement.Positive values mean the mousewheel
+has moved up, negative down.Can be 0 (no movement)
 */
 int		Mouse::GetWheelMovement()	{
 	return (int)frameWheel;
 }
 
 /*
-Updates the double click timers for each mouse button. msec is milliseconds
-since the last UpdateDoubleClick call. Timers going over the double click
+Updates the double click timers for each mouse button.msec is milliseconds
+since the last UpdateDoubleClick call.Timers going over the double click
 limit set the relevant double click value to false.
 */
 void Mouse::UpdateDoubleClick(float msec)	{

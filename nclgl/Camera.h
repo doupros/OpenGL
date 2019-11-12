@@ -2,7 +2,7 @@
 Class:Camera
 Implements:
 Author:Rich Davison	<richard.davison4@newcastle.ac.uk>
-Description:FPS-Style camera. Uses the mouse and keyboard from the Window
+Description:FPS-Style camera.Uses the mouse and keyboard from the Window
 class to get movement values!
 
 -_-_-_-_-_-_-_,------,   
