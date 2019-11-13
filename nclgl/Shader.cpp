@@ -5,12 +5,12 @@ Shader::Shader(string vFile, string fFile, string gFile) {
 	objects[SHADER_VERTEX] = GenerateShader(vFile, GL_VERTEX_SHADER);
 	objects[SHADER_FRAGMENT] = GenerateShader(fFile, GL_FRAGMENT_SHADER);
 	objects[SHADER_GEOMETRY] = 0;
-	
-	if (!gFile.empty()) 
+
+	if (!gFile.empty())
 	{
-	objects[SHADER_GEOMETRY] = GenerateShader(gFile,
-	GL_GEOMETRY_SHADER);
-	glAttachShader(program, objects[SHADER_GEOMETRY]);	
+		objects[SHADER_GEOMETRY] = GenerateShader(gFile,
+			GL_GEOMETRY_SHADER);
+		glAttachShader(program, objects[SHADER_GEOMETRY]);
 	}
 	glAttachShader(program, objects[SHADER_VERTEX]);
 	glAttachShader(program, objects[SHADER_FRAGMENT]);
@@ -85,6 +85,7 @@ bool Shader::LoadShaderFile(string from, string& into) {
 void Shader::SetDefaultAttributes() {
 	glBindAttribLocation(program, VERTEX_BUFFER, "position");
 	glBindAttribLocation(program, COLOUR_BUFFER, "colour");
+	glBindAttribLocation(program, NORMAL_BUFFER, "normal");
 	glBindAttribLocation(program, TEXTURE_BUFFER, "texCoord");
 }
 

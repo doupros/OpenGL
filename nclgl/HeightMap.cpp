@@ -44,5 +44,6 @@ HeightMap::HeightMap(std::string name) {
 			indices[numIndices++] = c;
 		}
 	}
+	GenerateNormals();
 	BufferData();
 }

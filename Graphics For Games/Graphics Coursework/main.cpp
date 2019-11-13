@@ -9,8 +9,9 @@ int main() {
 	if (!w.HasInitialised()){
 		return -1;
 	}
+	while (true)
+	{
 
-
-
+	}
 	return 0;
 }

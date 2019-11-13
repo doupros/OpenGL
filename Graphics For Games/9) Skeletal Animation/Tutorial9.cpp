@@ -21,6 +21,5 @@ int main() {
 		renderer.UpdateScene(w.GetTimer()->GetTimedMS());
 		renderer.RenderScene();
 	}
-
 	return 0;
 }
