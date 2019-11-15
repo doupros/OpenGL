@@ -4,7 +4,7 @@
 #include "Renderer.h"
 
 int main() {
-	Window w("Cube Mapping! sky textures courtesy of http://www.hazelwhorley.com", 800,600,false);
+	Window w("Cube Mapping! sky textures courtesy of http://www.hazelwhorley.com", 1366,768,false);
 	if(!w.HasInitialised()) {
 		return -1;
 	}
@@ -19,6 +19,7 @@ int main() {
 
 	while(w.UpdateWindow() && !Window::GetKeyboard()->KeyDown(KEYBOARD_ESCAPE)){
 		renderer.UpdateScene(w.GetTimer()->GetTimedMS());
+		renderer.MoveLight();
 		renderer.RenderScene();
 	}
 

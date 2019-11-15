@@ -4,7 +4,7 @@
 #include "Renderer.h"
 
 int main() {
-	Window w("Per Pixel Lighting!", 800,600,false);
+	Window w("Per Pixel Lighting!", 1366,768,false);
 	if(!w.HasInitialised()) {
 		return -1;
 	}
@@ -19,7 +19,7 @@ int main() {
 
 	while(w.UpdateWindow() && !Window::GetKeyboard()->KeyDown(KEYBOARD_ESCAPE)){
 		renderer.UpdateScene(w.GetTimer()->GetTimedMS());
-		//renderer.MoveLight();
+		renderer.MoveLight();
 		renderer.RenderScene();
 	}
 

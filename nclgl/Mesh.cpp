@@ -72,6 +72,9 @@ Mesh* Mesh::GenerateQuad() {
 	m->vertices = new Vector3[m->numVertices];
 	m->textureCoords = new Vector2[m->numVertices];
 	m->colours = new Vector4[m->numVertices];
+	m->normals = new Vector3[m->numVertices];
+	m->tangents = new Vector3[m->numVertices];
+
 
 	m->vertices[0] = Vector3(-1.0f, -1.0f, 0.0f);
 	m->vertices[1] = Vector3(-1.0f, 1.0f, 0.0f);
@@ -85,8 +88,9 @@ Mesh* Mesh::GenerateQuad() {
 
 	for (int i = 0; i < 4; i++) {
 		m->colours[i] = Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+		m->normals[i] = Vector3(0.0f, 0.0f, -1.0f);
+		m->tangents[i] = Vector3(1.0f, 0.0f, 0.0f);
 	}
-
 	m->BufferData();
 	return m;
 }
@@ -107,11 +111,11 @@ void Mesh::GenerateNormals() {
 			Vector3 normal = Vector3::Cross(
 				(vertices[b] - vertices[a]), (vertices[c] - vertices[a]));
 
-		/*	Vector3 normal = Vector3::Cross(
-				(vertices[b] - vertices[a]), (vertices[c] - vertices[a]));
-			float temp = normal.x;
-			normal.x = normal.y;
-			normal.y = temp;*/
+			/*	Vector3 normal = Vector3::Cross(
+					(vertices[b] - vertices[a]), (vertices[c] - vertices[a]));
+				float temp = normal.x;
+				normal.x = normal.y;
+				normal.y = temp;*/
 
 			normals[a] += normal;
 			normals[b] += normal;
