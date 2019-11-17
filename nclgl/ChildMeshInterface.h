@@ -36,7 +36,9 @@ public:
 			delete children.at(i);
 		}
 	}
-
+ //Mesh ChildMeshInterface::GetChild(int num) {
+	//	return children[num];
+	//}
 protected:
 	//Some Meshes have children...
 	std::vector<Mesh*>children;
