@@ -20,7 +20,7 @@ _-_-_-_-_-_-_-""  ""
 class Camera	{
 public:
 	Camera(void){
-		yaw		= 0.0f;
+		yaw	= 0.0f;
 		pitch	= 0.0f;
 	};
 
@@ -32,7 +32,7 @@ public:
 
 	~Camera(void){};
 
-	void UpdateCamera(float msec = 10.0f);
+	void UpdateCamera(float msec = 5.0f);
 
 	//Builds a view matrix for the current camera variables, suitable for sending straight
 	//to a vertex shader (i.e it's already an 'inverse camera matrix').

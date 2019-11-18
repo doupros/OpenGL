@@ -47,6 +47,7 @@ void Renderer::RenderScene()	{
 
 	glUseProgram(currentShader->GetProgram());
 	glUniform1i(glGetUniformLocation(currentShader->GetProgram(), "diffuseTex"), 0);
+	glUniform1i(glGetUniformLocation(currentShader->GetProgram(), "bumpTex"), 1);
 
 	UpdateShaderMatrices();
 

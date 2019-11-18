@@ -1,5 +1,6 @@
 newmtl m0
 map_Kd Tex\ST.png
+map_bump st-N.png
 Ka 0.6 0.6 0.6
 Kd 0.8 0.8 0.8
 Ks 0.1 0.1 0.1
@@ -8,6 +9,7 @@ d 1
 
 newmtl m1
 map_Kd Tex\Stone.png
+map_bump Stone-N.png
 Ka 0.2 0.2 0.2
 Kd 0.5 0.5 0.5
 Ks 0.1 0.1 0.1
@@ -15,6 +17,8 @@ Ns 5
 d 1
 
 newmtl m2
+map_Kd F1-H.jpg
+map_bump F1-N.jpg
 Ka 0 0 0
 Kd 1 0.3 0.3
 Ks 1 0.6 0.6
@@ -39,6 +43,7 @@ d 1
 
 newmtl m5
 map_Kd Tex\FL.jpg
+map_bump FL-N.jpg
 Ka 0.4 0.4 0.4
 Kd 0.7 0.7 0.7
 Ks 0 0 0
