@@ -2,19 +2,19 @@
 #include "../../nclgl/SceneNode.h"
 #include "..\..\nclgl\OBJMesh.h" 
 
-class MidLakePavilion :public SceneNode{
+class MidLakePavilion :public SceneNode,public OBJMesh{
 public:
 	MidLakePavilion(void);
 	~MidLakePavilion(void) {};
 	virtual void Update(float msec);
+	OBJMesh* GetPavilion() { return pavilion; }
 	static void CreatePivilion() {
 		OBJMesh* m = new OBJMesh();
-		m->LoadOBJMesh(MESHDIR"MidLakePavilion.obj");
+		m->LoadOBJMesh(MESHDIR"夜明けと蛍ステージ.obj");
 		pavilion = m;
 	}
 	static void DeletePavilion() { delete pavilion; }
 protected:
-	static Mesh* pavilion;
-	SceneNode* stone;
+	static OBJMesh* pavilion;
 };
 

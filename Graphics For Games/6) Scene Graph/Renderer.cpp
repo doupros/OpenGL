@@ -37,7 +37,7 @@ void Renderer::UpdateScene(float msec) {
 	 glUseProgram(currentShader->GetProgram());
 	 UpdateShaderMatrices();
 
-	 glUniform1i(glGetUniformLocation(currentShader->GetProgram(), "diffuseTex"), 1);
+	 glUniform1i(glGetUniformLocation(currentShader->GetProgram(), "diffuseTex"), 0);
 
 	 DrawNode(root);
 

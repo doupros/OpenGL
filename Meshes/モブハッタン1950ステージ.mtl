@@ -1,0 +1,256 @@
+newmtl m0
+map_Kd GB.jpg
+Ka 0.6 0.6 0.6
+Kd 0.2784314 0.6627451 0.6627451
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m1
+map_Kd AP1.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m2
+map_Kd EMB1.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m3
+map_Kd BA1.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m4
+map_Kd BB1.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m5
+map_Kd BC1.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m6
+map_Kd BM1b.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m7
+map_Kd BM2b.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m8
+map_Kd FT1.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m9
+map_Kd C1.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m10
+map_Kd PC.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m11
+map_Kd R1.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m12
+map_Kd CR.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m13
+map_Kd RN.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m14
+map_Kd RL.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m15
+map_Kd RM.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m16
+map_Kd RCC.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m17
+map_Kd RMC.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m18
+map_Kd FT1.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m19
+map_Kd FN1.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m20
+map_Kd BRD.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m21
+map_Kd WL.jpg
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m22
+map_Kd tr1.png
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m23
+map_Kd hn.png
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m24
+map_Kd hn.png
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m25
+map_Kd tr.png
+Ka 0.6 0.6 0.6
+Kd 0.6392157 0.6392157 0.6392157
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m26
+map_Kd tr.png
+Ka 0.6 0.6 0.6
+Kd 0.6392157 0.6392157 0.6392157
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m27
+map_Kd ck.png
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m28
+map_Kd ck.png
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m29
+map_Kd wh.png
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m30
+map_Kd wh.png
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+
+newmtl m31
+map_Kd wh.png
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+d 1
+

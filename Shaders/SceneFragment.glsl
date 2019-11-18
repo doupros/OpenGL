@@ -12,8 +12,8 @@
  
  void main(void) { 
  fragColour = IN.colour; 
-	 if(useTexture > 0) { 
-	 fragColour *= texture(diffuseTex , IN.texCoord); 
-	 } 
+   vec2 tex = IN.texCoord;
+    tex.y = 1 - tex.y;
+	fragColour *= texture(diffuseTex , tex); 
  }
  
