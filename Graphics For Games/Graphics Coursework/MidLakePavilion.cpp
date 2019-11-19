@@ -1,6 +1,6 @@
 #include "MidLakePavilion.h"
 
-OBJMesh* MidLakePavilion::pavilion = NULL;
+Mesh* MidLakePavilion::pavilion = NULL;
 
 MidLakePavilion::MidLakePavilion(void) {
 	//SceneNode* mainScene = new SceneNode(pavilion, Vector4(1, 0, 1, 1));

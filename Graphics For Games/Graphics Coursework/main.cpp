@@ -1,8 +1,6 @@
-#include "../../nclgl/Window.h"
-#include "../../nclgl/OGLRenderer.h"
-#include "Renderer.h"
-
 #pragma comment(lib, "nclgl.lib")
+#include "../../nclgl/Window.h"
+#include "Renderer.h"
 
 int main() {
 	Window w("coursework", 1366, 768, false);
@@ -15,10 +13,10 @@ int main() {
 		return -1;
 	}
 	w.LockMouseToWindow(true);
-	w.ShowOSPointer(true);
+	//w.ShowOSPointer(true);
+
 	while (w.UpdateWindow() && !Window::GetKeyboard()->KeyDown(KEYBOARD_ESCAPE)) {
 		renderer.UpdateScene(w.GetTimer()->GetTimedMS());
-		renderer.MoveLight();
 		renderer.RenderScene();
 	}
 	return 0;

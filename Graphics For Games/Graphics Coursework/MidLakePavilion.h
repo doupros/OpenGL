@@ -7,14 +7,15 @@ public:
 	MidLakePavilion(void);
 	~MidLakePavilion(void) {};
 	virtual void Update(float msec);
-	OBJMesh* GetPavilion() { return pavilion; }
+	Mesh* GetPavilion() { return pavilion; }
 	static void CreatePivilion() {
 		OBJMesh* m = new OBJMesh();
-		m->LoadOBJMesh(MESHDIR"夜明けと蛍ステージ.obj");
+		m->LoadOBJMesh(MESHDIR"モブ重巡洋艦1943(ﾓﾌﾞﾃｨﾓｱ).obj");
 		pavilion = m;
 	}
-	static void DeletePavilion() { delete pavilion; }
+	static void DeletePavilion() { delete pavilion; }	
+	static Mesh* pavilion;
 protected:
-	static OBJMesh* pavilion;
+
 };
 
