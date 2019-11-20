@@ -32,7 +32,6 @@ Renderer::Renderer(Window& parent) : OGLRenderer(parent) {
 	projMatrix = Matrix4::Perspective(1.0f, 15000.0f,
 		(float)width / (float)height, 45.0f);
 
-	light->SetColour(Vector4(1, 0, 0, 1));
 	glEnable(GL_DEPTH_TEST);
 	init = true;
 }

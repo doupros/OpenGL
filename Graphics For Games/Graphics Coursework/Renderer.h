@@ -5,6 +5,7 @@
 #include "..\..\nclgl\MD5Mesh.h"
 #include "..\..\nclgl\MD5Node.h"
 # define SHADOWSIZE 2048 
+# define POST_PASSES 10
 class Renderer :public OGLRenderer {
 public:
 	Renderer(Window& parent);
@@ -13,6 +14,7 @@ public:
 	virtual void RenderScene();
 	virtual void UpdateScene(float msec);
 	virtual void MoveLight();
+	void TogglePostProssing();
 protected:
 	void DrawHeightmap();
 	void DrawWater();
@@ -20,15 +22,18 @@ protected:
 	void DrawMesh(); // New !
 	void DrawShadowScene(); // New !
 	void DrawCombinedScene(); // New !
+	void DrawPostProcess();
 
 	Shader* lightShader;
 	Shader* reflectShader;
 	Shader* skyboxShader;
 	Shader* sceneShader;
 	Shader* shadowShader;
+	Shader* processShader;
 
 	HeightMap* heightMap;
 	Mesh* quad;
+	Mesh* quad1;
 
 	GLuint shadowTex;
 	GLuint shadowFBO;
@@ -39,6 +44,11 @@ protected:
 	Light* light;
 	Camera* camera;
 
+	GLuint bufferFBO;
+	GLuint processFBO;
+	GLuint bufferColourTex[2];
+	GLuint bufferDepthTex;
+	bool usingpostProssing=false;
 	float waterRotate;
 
 };
