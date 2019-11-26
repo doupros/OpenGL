@@ -1,0 +1,78 @@
+newmtl m0
+map_Kd Tex\ST.png
+Ka 0.6 0.6 0.6
+Kd 0.8 0.8 0.8
+Ks 0.1 0.1 0.1
+Ns 23.33333
+d 1
+
+newmtl m1
+map_Kd Tex\Stone.png
+Ka 0.2 0.2 0.2
+Kd 0.5 0.5 0.5
+Ks 0.1 0.1 0.1
+Ns 5
+d 1
+
+newmtl m2
+Ka 0 0 0
+Kd 1 0.3 0.3
+Ks 1 0.6 0.6
+Ns 13.33333
+d 1
+
+newmtl m3
+map_Kd Tex\wood.png
+Ka 1 0 0.1
+Kd 1 0 0.1
+Ks 0 0 0
+Ns 5
+d 1
+
+newmtl m4
+map_Kd Tex\Branch.png
+Ka 0.5 0.5 0.5
+Kd 0.8 0.8 0.8
+Ks 0 0 0
+Ns 2
+d 1
+
+newmtl m5
+map_Kd Tex\FL.jpg
+Ka 0.4 0.4 0.4
+Kd 0.7 0.7 0.7
+Ks 0 0 0
+Ns 5
+d 1
+
+newmtl m6
+Ka 0 0.093529 0.112353
+Kd 0 0.623529 0.74902
+Ks 0.566667 0.566667 0.566667
+Ns 7.777778
+d 0.3
+
+newmtl m7
+map_Kd Tex\Diff.png
+Ka 0.5 0.5 0.5
+Kd 0.8 0.8 0.8
+Ks 0 0 0
+Ns 2
+d 1
+
+newmtl m8
+map_Kd Tex\Leaf.png
+Ka 0.5 0.5 0.5
+Kd 0.8 0.8 0.8
+Ks 0 0 0
+Ns 2
+d 1
+
+newmtl m9
+map_Kd Tex\Away.png
+Ka 0.2 0.2 0.2
+Kd 0.5 0.5 0.5
+Ks 0 0 0
+Ns 5
+d 0.98
+
